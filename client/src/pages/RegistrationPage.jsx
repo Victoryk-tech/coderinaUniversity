@@ -5,7 +5,7 @@ const RegistrationPage = () => {
     <div className="flex flex-col justify-center items-center min-h-screen inset-0 overflow-hidden">
       <div className="lg:grid grid-cols-1 sm:grid-cols-2 h-screen fixed inset-0">
         {/* picture */}
-        <div className="text-black min-h-full relative hidden lg:flex justify-center flex-col items-center  gap-4">
+        <div className="text-black min-h-full relative hidden lg:flex justify-center flex-col items-center gap-4">
           <span className="absolute inset-0 bg-blue1/70 -z-10" />
           <span className="flex justify-center absolute inset-0 -z-20">
             <img
@@ -28,7 +28,7 @@ const RegistrationPage = () => {
           </div>
           <form
             action="form"
-            className="space-y-4  w-[99%] md:w-2/3 lg:w-3/4 py-2"
+            className="space-y-4  w-[99%] md:w-2/3 lg:w-3/4 pt-2"
           >
             <div className="flex flex-col items-start justify-start space-y-4">
               <input
