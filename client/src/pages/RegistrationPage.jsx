@@ -18,26 +18,36 @@ const RegistrationPage = () => {
 
         {/* left register */}
         <div className="bg-white min-h-full flex justify-center flex-col items-center relative p-5">
-          <div></div>
-          <form action="form" className="space-y-4">
-            <div className="flex items-start justify-start space-x-3">
+          <div className="py-2">
+            <h1 className="font-extrabold text-3xl md:text-5xl p-5">
+              Coderina University
+            </h1>
+            <h4 className="font-semibold text-2xl  text-center ">
+              Registration form
+            </h4>
+          </div>
+          <form
+            action="form"
+            className="space-y-4  w-[99%] md:w-2/3 lg:w-3/4 py-2"
+          >
+            <div className="flex flex-col items-start justify-start space-y-4">
               <input
                 type="text"
                 name="first Name"
                 placeholder="First Name"
-                className="border-2 border-[#39f] py-2 pl-1 rounded-lg text-[15px] placeholder:text-[15px] font-semibold placeholder:text-[#000]"
+                className="w-full border-2 border-[#39f] py-3 pl-1 rounded-lg text-[15px] placeholder:text-[15px] font-semibold placeholder:text-[#000]"
               />
               <input
                 type="text"
                 name="Middle Name"
                 placeholder="Middle Name"
-                className="border-2 border-[#39f] py-2 pl-1 rounded-lg text-[15px] placeholder:text-[15px] font-semibold placeholder:text-[#000]"
+                className="w-full border-2 border-[#39f] py-3 pl-1 rounded-lg text-[15px] placeholder:text-[15px] font-semibold placeholder:text-[#000]"
               />
               <input
                 type="text"
                 name="Last Name"
                 placeholder="Last Name"
-                className="border-2 border-[#39f] py-2 pl-1 rounded-lg text-[15px] placeholder:text-[15px] font-semibold placeholder:text-[#000]"
+                className="w-full border-2 border-[#39f] py-3 pl-1 rounded-lg text-[15px] placeholder:text-[15px] font-semibold placeholder:text-[#000]"
               />
             </div>
 
@@ -53,7 +63,7 @@ const RegistrationPage = () => {
                 type="text"
                 name="Department"
                 placeholder="Department"
-                className="w-full border-2 border-[#39f] py-3 pl-1 rounded-lg text-[15px] placeholder:text-[15px] font-semibold placeholder:text-[#000]"
+                className="w-full border-2 border-[#39f] py-3 pl-1 rounded-lg text-[15px] placeholder:text-[15px] font-semibold placeholder:text-[#303030]"
               />
               <input
                 type="text"
@@ -62,12 +72,12 @@ const RegistrationPage = () => {
                 className="w-full border-2 border-[#39f] py-3 pl-1 rounded-lg text-[15px] placeholder:text-[15px] font-semibold placeholder:text-[#000]"
               />
             </div>
-            <div className="flex items-start justify-start space-x-3">
+            <div className="flex items-start justify-start space-x-2">
               <input
                 type="Number"
                 name="Level"
                 placeholder="Level"
-                className=" border-2 border-[#39f] py-2 pl-1 rounded-lg text-[15px] placeholder:text-[15px] font-semibold placeholder:text-[#000]"
+                className="w-20 border-2 border-[#39f] py-2 pl-1 rounded-lg text-[15px] placeholder:text-[15px] font-semibold placeholder:text-[#000]"
               />
               <input
                 type="Number"
@@ -79,11 +89,11 @@ const RegistrationPage = () => {
                 type="text"
                 name="Gender"
                 placeholder="Gender"
-                className=" border-2 border-[#39f] py-2 pl-1 rounded-lg text-[15px] placeholder:text-[15px] font-semibold placeholder:text-[#000]"
+                className="w-[3.8rem] md:w-52 lg:w-40 border-2 border-[#39f] py-2 pl-1 rounded-lg text-[15px] placeholder:text-[15px] font-semibold placeholder:text-[#000]"
               />
             </div>
 
-            <button className=" md:w-full flex items-center justify-center space-x-2 hover:bg-transparent hover:border-[#39f] hover:border-[0.3px] px-16 py-3 rounded-xl hover:text-[#39f] hover:shadow-[0_0_20px_#39f] bg-[#39f] text-white transition-all ease-out shadow-sm cursor-pointer">
+            <button className=" w-full flex items-center justify-center space-x-2 hover:bg-transparent hover:border-[#39f] hover:border-[0.3px] px-16 py-3 rounded-xl hover:text-[#39f] hover:shadow-[0_0_20px_#39f] bg-[#39f] text-white transition-all ease-out shadow-sm cursor-pointer">
               Register
             </button>
           </form>
