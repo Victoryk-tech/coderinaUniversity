@@ -19,7 +19,7 @@ const Loader = ({ setIsLoading }) => {
 
   return (
     <div className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full bg-indigo-50">
-      <div className="relative text-4xl font-bold text-indigo-900 md:text-8xl">
+      <div className="relative text-4xl font-bold text-indigo-900 md:text-5xl lg:text-8xl">
         <div
           className="absolute top-0 left-0 overflow-hidden text-indigo-600 transition-all duration-500 ease-linear"
           style={{
