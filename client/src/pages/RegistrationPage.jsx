@@ -159,7 +159,7 @@ const RegistrationPage = () => {
               </h3>
               <div className="space-x-3 flex items-center justify-start">
                 <input type="checkbox"></input>
-                <p>
+                <p className="text-[10px] md:text-[16px]">
                   Yes, I accept the Coderina University Challenge Terms and
                   Conditions.
                 </p>
