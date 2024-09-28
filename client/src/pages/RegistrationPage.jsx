@@ -1,7 +1,66 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import logo from "../assets/logo.png";
+import { toast } from "react-toastify";
 const RegistrationPage = () => {
+  const initialValues = {
+    firstName: "",
+    email: "",
+    lastName: "",
+    institution: "",
+    country: "",
+    challengeName: "",
+  };
+  const [formValues, setFormValues] = useState(initialValues);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
+    toast("successsful");
+  };
+
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(formValues);
+    }
+  }, [formErrors]);
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (!values.firstName) {
+      errors.firstName = "Your first name is required!";
+    }
+    if (!values.lastName) {
+      errors.lastName = "Your last name is required!";
+    }
+    if (!values.country) {
+      errors.country = "Your country's name is required!";
+    }
+    if (!values.challengeName) {
+      errors.challengeName = "Your Team name is required!";
+    }
+    if (!values.email) {
+      errors.email = "Email is required!";
+    } else if (!regex.test(values.email)) {
+      errors.email = "This is not a valid email format!";
+    }
+    if (!values.institution) {
+      errors.institution = "Name of institution is required";
+    } else if (values.institution.length < 6) {
+      errors.institution = "Full name of institution is required";
+    }
+    return errors;
+  };
+
   return (
     <div className="w-full ">
       <div className=" md:px-2">
@@ -13,18 +72,33 @@ const RegistrationPage = () => {
       <div className=" lg:px-20 py-4">
         {" "}
         <div className="flex flex-col items-start justify-start px-2 md:px-16 pb-8 md:py-10 lg:py-16 w-full shadow-md bg-white">
+          {/* {Object.keys(formErrors).length === 0 && isSubmit ? (
+            <div className="ui message success">Registered in successfully</div>
+          ) : (
+            <pre>{JSON.stringify(formValues, undefined, 4)}</pre>
+          )} */}
+
           <div className="w-full pt-5 md:pt-1 text-[28px] lg:text-3xl font-bold md:font-semibold pb-6 lg:pb-8 border-b-[1px] border-slate-300">
             <h1 className="text-green-900 leading-10">
               UNIVERSITY CHALLENGE REGISTRATION
             </h1>
           </div>
-          <form action="form" className="w-full md:w-3/4">
+          <form
+            action="form"
+            onSubmit={handleSubmit}
+            className="w-full md:w-3/4"
+          >
             <div className="pt-6 space-y-2">
               <label htmlFor="">Team challenge name*</label>
               <input
                 type="text"
-                className="w-full md:px-2 py-1 border-[1px] border-slate-300 hover:outline-none"
+                value={formValues.challengeName}
+                onChange={handleChange}
+                className="w-full md:px-2 py-1 border-[1px] border-slate-300 outline-none"
               />
+              <p className="text-sm text-red-600 pl-1 font-medium">
+                {formErrors.challengeName}
+              </p>
             </div>
 
             <div className="w-full">
@@ -39,23 +113,41 @@ const RegistrationPage = () => {
                       <label htmlFor="">First name*</label>
                       <input
                         type="text"
-                        className="w-[20rem] md:w-80  pl-2 border-[1px] border-slate-300 rounded-md  py-1 outline-none"
+                        name="firstName"
+                        value={formValues.firstName}
+                        onChange={handleChange}
+                        className="w-[20rem] md:w-80 text-[14px] pl-2 border-[1px] border-slate-300 rounded-md  py-1 outline-none"
                       />
+                      <p className="text-sm text-red-600 pl-1 font-medium">
+                        {formErrors.firstName}
+                      </p>
                     </div>
                     <div className="flex flex-col items-start justify-start space-y-1">
                       <label htmlFor="">Email*</label>
                       <input
                         type="Email"
+                        name="email"
+                        value={formValues.email}
+                        onChange={handleChange}
                         placeholder="only university/college emails accepted"
-                        className="w-[20rem] md:w-80 outline-none   pl-2 border-[1px] border-slate-300 rounded-md py-1 placeholder:text-sm placeholder:pl-4"
+                        className="w-[20rem] text-[14px] md:w-80 outline-none   pl-2 border-[1px] border-slate-300 rounded-md py-1 placeholder:text-sm placeholder:pl-4"
                       />
+                      <p className="text-sm text-red-600 pl-1 font-medium">
+                        {formErrors.email}
+                      </p>
                     </div>
                     <div className="flex flex-col items-start justify-start space-y-1">
                       <label htmlFor="">Country*</label>
                       <input
                         type="text"
-                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 outline-none"
+                        name="country"
+                        value={formValues.country}
+                        onChange={handleChange}
+                        className=" pl-2 text-[14px] border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 outline-none"
                       />
+                      <p className="text-sm text-red-600 pl-1 font-medium">
+                        {formErrors.country}
+                      </p>
                     </div>
                   </div>
 
@@ -64,16 +156,28 @@ const RegistrationPage = () => {
                       <label htmlFor="">Last name*</label>
                       <input
                         type="text"
-                        className="w-[20rem] md:w-80   pl-2 border-[1px] border-slate-300 rounded-md py-1 outline-none"
+                        name="lastName"
+                        value={formValues.lastName}
+                        onChange={handleChange}
+                        className="w-[20rem] text-[14px] md:w-80   pl-2 border-[1px] border-slate-300 rounded-md py-1 outline-none"
                       />
+                      <p className="text-sm text-red-600 pl-1 font-medium">
+                        {formErrors.lastName}
+                      </p>
                     </div>
                     <div className="flex flex-col items-start justify-start space-y-1">
                       <label htmlFor="">Institution name*</label>
                       <input
                         type="text"
+                        name="institution"
+                        value={formValues.institution}
+                        onChange={handleChange}
                         placeholder="only university/college institutions accepted"
-                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 placeholder:text-sm placeholder:pl-4 outline-none"
+                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80 text-[14px]  py-1 placeholder:text-sm placeholder:pl-4 outline-none"
                       />
+                      <p className="text-sm text-red-600 pl-1 font-medium">
+                        {formErrors.institution}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -165,7 +269,10 @@ const RegistrationPage = () => {
                 </p>
               </div>
 
-              <button className="px-8 py-3 text-sm cursor-pointer bg-green-900 text-white rounded-md ">
+              <button
+                type="submit"
+                className="px-8 py-3 text-sm cursor-pointer bg-green-900 text-white rounded-md hover:shadow-sm hover:scale-105 transition-all duration-500 ease-in-out hover:border-[1px] hover:border-green-900 hover:bg-transparent hover:text-green-900"
+              >
                 REGISTER
               </button>
             </div>

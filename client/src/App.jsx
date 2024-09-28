@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./App.css";
 import RegistrationPage from "./pages/RegistrationPage";
@@ -9,6 +11,7 @@ function App() {
 
   return (
     <div>
+      <ToastContainer />
       {isLoading && <Loader setIsLoading={setIsLoading} />}{" "}
       {/* Show Loader if loading */}
       {!isLoading && <RegistrationPage />}{" "}
