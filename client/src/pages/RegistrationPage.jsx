@@ -24,7 +24,6 @@ const RegistrationPage = () => {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
-    toast("successsful");
   };
 
   useEffect(() => {
