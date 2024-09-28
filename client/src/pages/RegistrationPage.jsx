@@ -12,14 +12,18 @@ const RegistrationPage = () => {
     institution: "",
     country: "",
     team: "",
+    checkbox: false,
   };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
+    const { name, value, type, checked } = e.target;
+    setFormValues({
+      ...formValues,
+      [name]: type === "checkbox" ? checked : value,
+    });
   };
 
   const handleSubmit = (e) => {
@@ -29,7 +33,7 @@ const RegistrationPage = () => {
     setFormErrors(validate(formValues));
     setIsSubmit(true);
 
-    const { email, country, firstName, lastName, institution, team } =
+    const { email, country, firstName, lastName, institution, team, checkbox } =
       formValues;
 
     // Check if any field is empty
@@ -39,7 +43,8 @@ const RegistrationPage = () => {
       firstName === "" ||
       lastName === "" ||
       institution === "" ||
-      team === ""
+      team === "" ||
+      checkbox === false
     ) {
       toast.error("Please fill in all fields"); // Display error message
     } else {
@@ -79,6 +84,7 @@ const RegistrationPage = () => {
     } else if (values.institution.length < 6) {
       errors.institution = "Full name of institution is required";
     }
+
     return errors;
   };
 
@@ -279,9 +285,22 @@ const RegistrationPage = () => {
                 Coderina will use, process and store your personal data at all
                 times in compliance with our Privacy Policy.
               </h3>
-              <div className="space-x-3 flex items-center justify-start">
-                <input type="checkbox"></input>
-                <p className="text-[10px] md:text-[16px]">
+              <div
+                className={`${
+                  formValues.checkbox === false
+                    ? " text-red-500 "
+                    : "text-black"
+                }  flex items-center justify-start`}
+                // className="space-x-3 flex items-center justify-start"
+              >
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  checked={formValues.checkbox}
+                  onChange={handleChange}
+                  className="w-10"
+                ></input>
+                <p className="text-[9px] md:text-[14px]">
                   Yes, I accept the Coderina University Challenge Terms and
                   Conditions.
                 </p>
