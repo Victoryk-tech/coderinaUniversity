@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import logo from "../assets/logo.png";
-import { toast } from "react-toastify";
+
+import toast, { Toaster } from "react-hot-toast";
+
 const RegistrationPage = () => {
   const initialValues = {
     firstName: "",
@@ -22,8 +24,28 @@ const RegistrationPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Validate form values and update error state
     setFormErrors(validate(formValues));
     setIsSubmit(true);
+
+    const { email, country, firstName, lastName, institution, team } =
+      formValues;
+
+    // Check if any field is empty
+    if (
+      email === "" ||
+      country === "" ||
+      firstName === "" ||
+      lastName === "" ||
+      institution === "" ||
+      team === ""
+    ) {
+      toast.error("Please fill in all fields"); // Display error message
+    } else {
+      toast.success("Form submitted successfully!"); // Display success message
+      setFormValues(initialValues);
+    }
   };
 
   useEffect(() => {
@@ -62,6 +84,7 @@ const RegistrationPage = () => {
 
   return (
     <div className="w-full ">
+      <Toaster />
       <div className=" md:px-2">
         {/* <h1 className="text-xl font-bold">Coderina</h1> */}
         <div className="w-28 h-20">
@@ -71,12 +94,6 @@ const RegistrationPage = () => {
       <div className=" lg:px-20 py-4">
         {" "}
         <div className="flex flex-col items-start justify-start px-2 md:px-16 pb-8 md:py-10 lg:py-16 w-full shadow-md bg-white">
-          {/* {Object.keys(formErrors).length === 0 && isSubmit ? (
-            <div className="ui message success">Registered in successfully</div>
-          ) : (
-            <pre>{JSON.stringify(formValues, undefined, 4)}</pre>
-          )} */}
-
           <div className="w-full pt-5 md:pt-1 text-[28px] lg:text-3xl font-bold md:font-semibold pb-6 lg:pb-8 border-b-[1px] border-slate-300">
             <h1 className="text-green-900 leading-10">
               UNIVERSITY CHALLENGE REGISTRATION
@@ -91,6 +108,7 @@ const RegistrationPage = () => {
               <label htmlFor="">Team challenge name*</label>
               <input
                 type="text"
+                name="team"
                 value={formValues.team}
                 onChange={handleChange}
                 className="w-full md:px-2 py-1 border-[1px] border-slate-300 outline-none"
