@@ -23,7 +23,7 @@ const RegistrationPage = () => {
               <label htmlFor="">Team challenge name*</label>
               <input
                 type="text"
-                className="w-full md:px-2 py-1 border-[1px] border-slate-300"
+                className="w-full md:px-2 py-1 border-[1px] border-slate-300 hover:outline-none"
               />
             </div>
 
@@ -39,7 +39,7 @@ const RegistrationPage = () => {
                       <label htmlFor="">First name*</label>
                       <input
                         type="text"
-                        className="w-[20rem] md:w-80  pl-2 border-[1px] border-slate-300 rounded-md  py-1"
+                        className="w-[20rem] md:w-80  pl-2 border-[1px] border-slate-300 rounded-md  py-1 outline-none"
                       />
                     </div>
                     <div className="flex flex-col items-start justify-start space-y-1">
@@ -47,14 +47,14 @@ const RegistrationPage = () => {
                       <input
                         type="Email"
                         placeholder="only university/college emails accepted"
-                        className="w-[20rem] md:w-80    pl-2 border-[1px] border-slate-300 rounded-md py-1 placeholder:text-sm placeholder:pl-4"
+                        className="w-[20rem] md:w-80 outline-none   pl-2 border-[1px] border-slate-300 rounded-md py-1 placeholder:text-sm placeholder:pl-4"
                       />
                     </div>
                     <div className="flex flex-col items-start justify-start space-y-1">
                       <label htmlFor="">Country*</label>
                       <input
                         type="text"
-                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1"
+                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 outline-none"
                       />
                     </div>
                   </div>
@@ -64,7 +64,7 @@ const RegistrationPage = () => {
                       <label htmlFor="">Last name*</label>
                       <input
                         type="text"
-                        className="w-[20rem] md:w-80   pl-2 border-[1px] border-slate-300 rounded-md py-1"
+                        className="w-[20rem] md:w-80   pl-2 border-[1px] border-slate-300 rounded-md py-1 outline-none"
                       />
                     </div>
                     <div className="flex flex-col items-start justify-start space-y-1">
@@ -72,7 +72,7 @@ const RegistrationPage = () => {
                       <input
                         type="text"
                         placeholder="only university/college institutions accepted"
-                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 placeholder:text-sm placeholder:pl-4"
+                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 placeholder:text-sm placeholder:pl-4 outline-none"
                       />
                     </div>
                   </div>
@@ -90,7 +90,7 @@ const RegistrationPage = () => {
                       <label htmlFor="">First name*</label>
                       <input
                         type="text"
-                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1"
+                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 outline-none"
                       />
                     </div>
                     <div className="flex flex-col items-start justify-start space-y-1">
@@ -98,7 +98,7 @@ const RegistrationPage = () => {
                       <input
                         type="Email"
                         placeholder="only university/college emails accepted"
-                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 placeholder:text-sm placeholder:pl-4"
+                        className="outline-none pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 placeholder:text-sm placeholder:pl-4"
                       />
                     </div>
                   </div>
@@ -108,7 +108,7 @@ const RegistrationPage = () => {
                       <label htmlFor="">Last name*</label>
                       <input
                         type="text"
-                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1"
+                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 outline-none"
                       />
                     </div>
                   </div>
@@ -126,7 +126,7 @@ const RegistrationPage = () => {
                       <label htmlFor="">First name*</label>
                       <input
                         type="text"
-                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1"
+                        className="outline-none pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1"
                       />
                     </div>
                     <div className="flex flex-col items-start justify-start space-y-1">
@@ -134,7 +134,7 @@ const RegistrationPage = () => {
                       <input
                         type="Email"
                         placeholder="only university/college emails accepted"
-                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 placeholder:text-sm placeholder:pl-4"
+                        className="outline-none pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 placeholder:text-sm placeholder:pl-4"
                       />
                     </div>
                   </div>
@@ -144,7 +144,7 @@ const RegistrationPage = () => {
                       <label htmlFor="">Last name*</label>
                       <input
                         type="text"
-                        className=" pl-1 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80 py-1"
+                        className="hover:outline-none outline-none pl-1 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80 py-1"
                       />
                     </div>
                   </div>
