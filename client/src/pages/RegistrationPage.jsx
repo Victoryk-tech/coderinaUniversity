@@ -152,15 +152,18 @@ const RegistrationPage = () => {
               </div>
             </div>
 
-            <div className="space-y-4 text-[14px]">
+            <div className="space-y-4 text-[14px] items-start">
               <h3 className="">
                 Coderina will use, process and store your personal data at all
                 times in compliance with our Privacy Policy.
               </h3>
-              <p>
-                Yes, I accept the Coderina University Challenge Terms and
-                Conditions.
-              </p>
+              <div className="space-x-3 flex items-center justify-start">
+                <input type="checkbox"></input>
+                <p>
+                  Yes, I accept the Coderina University Challenge Terms and
+                  Conditions.
+                </p>
+              </div>
 
               <button className="px-8 py-3 text-sm cursor-pointer bg-green-900 text-white rounded-md ">
                 REGISTER
