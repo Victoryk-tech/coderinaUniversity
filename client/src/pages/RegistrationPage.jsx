@@ -1,18 +1,24 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import logo from "../assets/logo.png";
 const RegistrationPage = () => {
   return (
-    <div className="w-full bg-slate-100  overflow-x-hidden">
-      <div className="py-6 px-2 md:px-4 bg-slate-200">
-        <h1 className="text-xl font-bold">Coderina</h1>
+    <div className="w-full ">
+      <div className=" md:px-2">
+        {/* <h1 className="text-xl font-bold">Coderina</h1> */}
+        <div className="w-28 h-20">
+          <img src={logo} alt="" className="w-full h-full object-contain" />
+        </div>
       </div>
       <div className=" lg:px-20 py-4">
         {" "}
-        <div className="flex flex-col items-start justify-start px-2 md:px-16 py-6 md:py-16 w-full shadow-md bg-white">
-          <div className="w-full pt-5 md:pt-1 text-2xl lg:text-3xl font-bold md:font-semibold pb-6 lg:pb-8 border-b-[1px] border-slate-300">
-            <h1 className="text-[#39f]">UNIVERSITY CHALLENGE REGISTRATION</h1>
+        <div className="flex flex-col items-start justify-start px-2 md:px-16 md:py-16 w-full shadow-md bg-white">
+          <div className="w-full pt-5 md:pt-1 text-[28px] lg:text-3xl font-bold md:font-semibold pb-6 lg:pb-8 border-b-[1px] border-slate-300">
+            <h1 className="text-[#39f] leading-10">
+              UNIVERSITY CHALLENGE REGISTRATION
+            </h1>
           </div>
-          <form action="form" className="w-full  lg:w-3/4">
+          <form action="form" className="w-full md:w-3/4">
             <div className="pt-6 space-y-2">
               <label htmlFor="">Team challenge name*</label>
               <input
@@ -33,7 +39,7 @@ const RegistrationPage = () => {
                       <label htmlFor="">First name*</label>
                       <input
                         type="text"
-                        className="w-full pl-2 border-[1px] border-slate-300 rounded-md md:w-80 py-1"
+                        className="w-full pl-2 border-[1px] border-slate-300 rounded-md  py-1"
                       />
                     </div>
                     <div className="flex flex-col items-start justify-start space-y-1">
@@ -41,7 +47,7 @@ const RegistrationPage = () => {
                       <input
                         type="Email"
                         placeholder="only university/college emails accepted"
-                        className=" pl-2 border-[1px] border-slate-300 rounded-md  md:w-80 py-1 placeholder:text-sm placeholder:pl-4"
+                        className="w-full  pl-2 border-[1px] border-slate-300 rounded-md py-1 placeholder:text-sm placeholder:pl-4"
                       />
                     </div>
                     <div className="flex flex-col items-start justify-start space-y-1">
@@ -58,7 +64,7 @@ const RegistrationPage = () => {
                       <label htmlFor="">Last name*</label>
                       <input
                         type="text"
-                        className=" pl-2 border-[1px] border-slate-300 rounded-md md:w-80 py-1"
+                        className="w-full pl-2 border-[1px] border-slate-300 rounded-md py-1"
                       />
                     </div>
                     <div className="flex flex-col items-start justify-start space-y-1">
