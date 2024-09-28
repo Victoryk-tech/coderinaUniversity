@@ -9,7 +9,7 @@ const RegistrationPage = () => {
     lastName: "",
     institution: "",
     country: "",
-    challengeName: "",
+    team: "",
   };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -44,8 +44,8 @@ const RegistrationPage = () => {
     if (!values.country) {
       errors.country = "Your country's name is required!";
     }
-    if (!values.challengeName) {
-      errors.challengeName = "Your Team name is required!";
+    if (!values.team) {
+      errors.team = "Your Team name is required!";
     }
     if (!values.email) {
       errors.email = "Email is required!";
@@ -91,10 +91,11 @@ const RegistrationPage = () => {
               <label htmlFor="">Team challenge name*</label>
               <input
                 type="text"
-                value={formValues.challengeName}
+                value={formValues.team}
                 onChange={handleChange}
                 className="w-full md:px-2 py-1 border-[1px] border-slate-300 outline-none"
               />
+
               <p className="text-sm text-red-600 pl-1 font-medium">
                 {formErrors.challengeName}
               </p>
