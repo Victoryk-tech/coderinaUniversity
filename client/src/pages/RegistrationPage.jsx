@@ -298,9 +298,9 @@ const RegistrationPage = () => {
                   name="checkbox"
                   checked={formValues.checkbox}
                   onChange={handleChange}
-                  className="w-10"
+                  className="w-6"
                 ></input>
-                <p className="text-[9px] md:text-[14px]">
+                <p className="text-[10.3px] md:text-[14px]">
                   Yes, I accept the Coderina University Challenge Terms and
                   Conditions.
                 </p>
