@@ -14,7 +14,7 @@ const RegistrationPage = () => {
         {" "}
         <div className="flex flex-col items-start justify-start px-2 md:px-16 pb-8 md:py-10 lg:py-16 w-full shadow-md bg-white">
           <div className="w-full pt-5 md:pt-1 text-[28px] lg:text-3xl font-bold md:font-semibold pb-6 lg:pb-8 border-b-[1px] border-slate-300">
-            <h1 className="text-[#39f] leading-10">
+            <h1 className="text-green-900 leading-10">
               UNIVERSITY CHALLENGE REGISTRATION
             </h1>
           </div>
@@ -162,7 +162,7 @@ const RegistrationPage = () => {
                 Conditions.
               </p>
 
-              <button className="px-8 py-3 text-sm cursor-pointer bg-[#39f] text-white rounded-md ">
+              <button className="px-8 py-3 text-sm cursor-pointer bg-green-900 text-white rounded-md ">
                 REGISTER
               </button>
             </div>
