@@ -144,36 +144,7 @@ const RegistrationPage = () => {
                         {formErrors.firstName}
                       </p>
                     </div>
-                    <div className="flex flex-col items-start justify-start space-y-1">
-                      <label htmlFor="">Email*</label>
-                      <input
-                        type="Email"
-                        name="email"
-                        value={formValues.email}
-                        onChange={handleChange}
-                        placeholder="only university/college emails accepted"
-                        className="w-[20rem] text-[14px] md:w-80 outline-none   pl-2 border-[1px] border-slate-300 rounded-md py-1 placeholder:text-sm placeholder:pl-4"
-                      />
-                      <p className="text-sm text-red-600 pl-1 font-medium">
-                        {formErrors.email}
-                      </p>
-                    </div>
-                    <div className="flex flex-col items-start justify-start space-y-1">
-                      <label htmlFor="">Country*</label>
-                      <input
-                        type="text"
-                        name="country"
-                        value={formValues.country}
-                        onChange={handleChange}
-                        className=" pl-2 text-[14px] border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 outline-none"
-                      />
-                      <p className="text-sm text-red-600 pl-1 font-medium">
-                        {formErrors.country}
-                      </p>
-                    </div>
-                  </div>
 
-                  <div className="space-y-3">
                     <div className="flex flex-col items-start justify-start space-y-1">
                       <label htmlFor="">Last name*</label>
                       <input
@@ -188,6 +159,23 @@ const RegistrationPage = () => {
                       </p>
                     </div>
                     <div className="flex flex-col items-start justify-start space-y-1">
+                      <label htmlFor="">Email*</label>
+                      <input
+                        type="Email"
+                        name="email"
+                        value={formValues.email}
+                        onChange={handleChange}
+                        placeholder="only university/college emails accepted"
+                        className="w-[20rem] text-[14px] md:w-80 outline-none   pl-2 border-[1px] border-slate-300 rounded-md py-1 placeholder:text-sm placeholder:pl-4"
+                      />
+                      <p className="text-sm text-red-600 pl-1 font-medium">
+                        {formErrors.email}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex flex-col items-start justify-start space-y-1">
                       <label htmlFor="">Institution name*</label>
                       <input
                         type="text"
@@ -199,6 +187,19 @@ const RegistrationPage = () => {
                       />
                       <p className="text-sm text-red-600 pl-1 font-medium">
                         {formErrors.institution}
+                      </p>
+                    </div>
+                    <div className="flex flex-col items-start justify-start space-y-1">
+                      <label htmlFor="">Country*</label>
+                      <input
+                        type="text"
+                        name="country"
+                        value={formValues.country}
+                        onChange={handleChange}
+                        className=" pl-2 text-[14px] border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 outline-none"
+                      />
+                      <p className="text-sm text-red-600 pl-1 font-medium">
+                        {formErrors.country}
                       </p>
                     </div>
                   </div>
@@ -219,22 +220,23 @@ const RegistrationPage = () => {
                         className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 outline-none"
                       />
                     </div>
+
                     <div className="flex flex-col items-start justify-start space-y-1">
-                      <label htmlFor="">Email*</label>
+                      <label htmlFor="">Last name*</label>
                       <input
-                        type="Email"
-                        placeholder="only university/college emails accepted"
-                        className="outline-none pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 placeholder:text-sm placeholder:pl-4"
+                        type="text"
+                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 outline-none"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-3">
                     <div className="flex flex-col items-start justify-start space-y-1">
-                      <label htmlFor="">Last name*</label>
+                      <label htmlFor="">Email*</label>
                       <input
-                        type="text"
-                        className=" pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 outline-none"
+                        type="Email"
+                        placeholder="only university/college emails accepted"
+                        className="outline-none pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 placeholder:text-sm placeholder:pl-4"
                       />
                     </div>
                   </div>
@@ -255,22 +257,23 @@ const RegistrationPage = () => {
                         className="outline-none pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1"
                       />
                     </div>
+
                     <div className="flex flex-col items-start justify-start space-y-1">
-                      <label htmlFor="">Email*</label>
+                      <label htmlFor="">Last name*</label>
                       <input
-                        type="Email"
-                        placeholder="only university/college emails accepted"
-                        className="outline-none pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 placeholder:text-sm placeholder:pl-4"
+                        type="text"
+                        className="hover:outline-none outline-none pl-1 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80 py-1"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-3">
                     <div className="flex flex-col items-start justify-start space-y-1">
-                      <label htmlFor="">Last name*</label>
+                      <label htmlFor="">Email*</label>
                       <input
-                        type="text"
-                        className="hover:outline-none outline-none pl-1 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80 py-1"
+                        type="Email"
+                        placeholder="only university/college emails accepted"
+                        className="outline-none pl-2 border-[1px] border-slate-300 rounded-md w-[20rem] md:w-80  py-1 placeholder:text-sm placeholder:pl-4"
                       />
                     </div>
                   </div>
