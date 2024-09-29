@@ -121,7 +121,7 @@ const RegistrationPage = () => {
               />
 
               <p className="text-sm text-red-600 pl-1 font-medium">
-                {formErrors.challengeName}
+                {formErrors.team}
               </p>
             </div>
 
