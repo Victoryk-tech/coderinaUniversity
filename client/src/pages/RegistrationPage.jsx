@@ -127,12 +127,10 @@ const RegistrationPage = () => {
 
             <div className="w-full">
               <div className="py-14 lg:py-16 space-y-6">
-                <h2 className="text-xl font-medium">
-                  Team memeber 1 (Captain)
-                </h2>
+                <h2 className="text-xl font-medium">Team Member 1 (Captain)</h2>
 
                 <div className="w-full flex flex-col md:flex-row items-start justify-start md:justify-between gap-3">
-                  <div className="space-y-3">
+                  <div className="space-y-3 ">
                     <div className="flex flex-col items-start justify-start space-y-1">
                       <label htmlFor="">First name*</label>
                       <input
@@ -209,7 +207,7 @@ const RegistrationPage = () => {
 
               <div className="py-4 space-y-6">
                 <h2 className="text-xl font-medium">
-                  Team memeber 2 (optional)
+                  Team Member 2 (optional)
                 </h2>
 
                 <div className="flex flex-col md:flex-row items-start justify-start md:justify-between gap-3">
@@ -245,7 +243,7 @@ const RegistrationPage = () => {
 
               <div className="py-6 lg:py-10 space-y-6">
                 <h2 className="text-xl font-medium">
-                  Team memeber 3 (optional)
+                  Team Member 3 (optional)
                 </h2>
 
                 <div className="flex flex-col md:flex-row items-start justify-start md:justify-between gap-3">
